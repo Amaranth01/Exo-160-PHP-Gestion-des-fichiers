@@ -6,6 +6,8 @@
  * --> Attention à bien fermer votre fichier si vous utilisez fopen()
  */
 // TODO Votre code ici.
+$content = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem facilis maiores ratione.';
+$contenu = file_put_contents('fichier.txt',$content);
 
 
 /**
@@ -15,6 +17,20 @@
  * --> Attention: les chaînes de caractères doivent s'ajouter à la suite du contenu déjà existant, pas d'écrasement.
  */
 // TODO Votre code ici
+$array = [
+    "première chaine",
+    "deuxième chaine",
+    "troisième chaine",
+    "quatrième chaine",
+    "cinquième chaine",
+    "sixième chaine",
+    "septième ciel euh chaine",
+    "huitième chaine",
+    "neuvième chaine",
+    "dixième chaine",
+];
+
+
 
 
 /**
@@ -28,7 +44,13 @@
  * 6. Testez si le fichier 'toto' existe, sil n'existe pas, afficher un texte distant que ce fichier n'existe pas !
  */
 // TODO Votre code ici.
-
+$file = 'toto.txt';
+if(file_exists($file)){
+    echo 'ce fichier existe';
+}
+else {
+    echo 'fichier inconnu au bataillon. Merci de vous renseigner un peu mieux';
+}
 
 /**
  * Super bonus.
@@ -36,3 +58,4 @@
  * Attention, il y a un piège avec les pointeurs, et une manière très simple de procéder... réfléchissez...
  */
 // TODO Votre code ici si vous faites le bonus.
+
