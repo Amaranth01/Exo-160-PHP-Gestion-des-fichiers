@@ -30,14 +30,15 @@ $array = [
     "dixième chaine",
 ];
 
-
-
+foreach ($array as $item) {
+    file_put_contents('fichier.txt', "\n" . $item, FILE_APPEND);
+}
 
 /**
  * 5. Trouvez une solution pour afficher à l'aide d'un simple echo l'extension du fichier index.php
  */
 // TODO Votre code ici
-
+echo nl2br(file_get_contents('fichier.txt')) . "<br>";
 
 
 /**
@@ -59,3 +60,7 @@ else {
  */
 // TODO Votre code ici si vous faites le bonus.
 
+$fichier = 'fichier.txt';
+
+$contenu = str_replace('a', '@', file_get_contents($fichier));
+file_put_contents($fichier, $contenu);
